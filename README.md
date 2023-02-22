@@ -2,11 +2,14 @@
 
 A Flutter Auction App Like Ebay for Ostad Coding Test.
 
-## Getting Started
+## Packeges uesd in this project
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+  firebase_core: 
+  google_sign_in: Used for Google Sign in
+  cloud_firestore: Used for Firestore Database
+  image_picker: Used for Pick Image from Gallery
+  firebase_storage: Used for Store Image in Firebase 
+  syncfusion_flutter_charts: Used for Visulize data in Graph
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
