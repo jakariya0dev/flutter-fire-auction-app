@@ -1,0 +1,1 @@
+const String kLogo = 'http://pngimg.com/uploads/google/google_PNG19635.png';
