@@ -1,6 +1,6 @@
-# auction_app
+# Auction App
 
-A new Flutter Auction App Loke Ebay for Ostad Test.
+A Flutter Auction App Like Ebay for Ostad Coding Test.
 
 ## Getting Started
 
