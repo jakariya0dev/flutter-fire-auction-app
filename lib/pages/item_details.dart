@@ -21,9 +21,14 @@ class _ItemDetailsState extends State<ItemDetails> {
     int winnerIndex = 0;
 
     // All Bidders details
-    List bids = widget.itemData!['bids'];
-    // All Bidders Email for this item
-    List biddersMail = bids.map((e) => e['email']).toList();
+    List bids = [];
+    List biddersMail = [];
+    if(widget.itemData!['bids'] != null){
+      bids = widget.itemData!['bids'];
+      // All Bidders Email for this item
+      biddersMail = bids.map((e) => e['email']).toList();
+    }
+
 
     if (DateTime.parse(widget.itemData!['lastDate']).compareTo(DateTime.now()) <
         0) {
@@ -100,8 +105,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                             itemCount: bids.length,
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) {
-                              if (winnerIndex <
-                                  int.parse(bids[index]['price'])) {
+                              if (winnerIndex < int.parse(bids[index]['price'])) {
                                 winnerIndex = index;
                               }
                               if (bids.isEmpty) {
@@ -110,8 +114,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 return bids.length - 1 != index
                                     ? const SizedBox()
                                     : Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(bids[winnerIndex]['name'],
                                               style: const TextStyle(

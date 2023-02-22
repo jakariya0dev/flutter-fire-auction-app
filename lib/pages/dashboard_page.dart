@@ -52,7 +52,7 @@ class _DashboardPageState extends State<DashboardPage> {
       // adding data for chart
       dataForChart.add(BidData(DateTime.parse(item['lastDate']), allBidsInSingleItem.reduce(max)));
 
-      print(allBidsInSingleItem);
+      // print(allBidsInSingleItem);
 
     }
 

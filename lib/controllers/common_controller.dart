@@ -28,7 +28,7 @@ class CommonController{
   fetchAllData() async {
     await ref.get().then((value) {
       data = value.docs;
-      print(data);
+      // print(data);
     });
 
   }
